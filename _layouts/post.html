@@ -5,20 +5,20 @@ layout: base
   <section id="main-content" aria-label="Content">
     <article class="post">
 
-      <header class="post-header">
-        <h1 class="post-title">{{ page.title | escape }}</h1>
-        <small>{{ page.date | date: "%Y-%m-%d" }}</small>
-      </header>
-
-      <div class="post-content">
-        {{ content }}
+      <div class="post-header">
+        <h1 id="post-title">{{ page.title | escape }}</h1>
+        <small>_date: {{ page.date | date: "%Y-%m-%d" }}</small>
       </div>
 
       {% if page.tags %}
       <div class="post-tags">
-        <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+        <small>_tags: <em>{{ page.tags | join: "</em>, <em>" }}</em></small>
       </div>
       {% endif %}
+
+      <div class="post-content">
+        {{ content }}
+      </div>
 
     </article>
   </section>

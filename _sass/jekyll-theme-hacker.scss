@@ -39,7 +39,11 @@ section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 20px;
+  margin: 0 0 0px;
+}
+
+.post-list li {
+    margin: 0 0 15px;
 }
 
 li {
@@ -77,10 +81,9 @@ header h1 {
   }
 }
 
-
 header h1:before {
-  content: "./ ";
-  font-size: 24px;
+  content: "./";
+  font-size: 30px;
 }
 
 header h2 {
@@ -315,4 +318,14 @@ a {
 #a-about {
   text-decoration: none;
   margin-right: auto; /* Push it to the left */
+}
+
+#post-title {
+    font-size: 28px;
+    text-decoration: none;
+    margin-right: auto; /* Push it to the left */
+}
+
+#post-title:before {
+    content: "$ ";
 }
