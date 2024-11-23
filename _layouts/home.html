@@ -1,34 +1,37 @@
 ---
 layout: base
 ---
-
-<div class="home">
-    {%- if page.title -%}
-      <h1 class="page-heading">{{ page.title }}</h1>
-    {%- endif -%}
-  
-    {% if site.paginate %}
-      {% assign posts = paginator.posts %}
-    {% else %}
-      {% assign posts = site.posts %}
-    {% endif %}
-  
-    {%- if posts.size > 0 -%}
-      {%- if page.list_title -%}
-        <h2 class="post-list-heading">{{ page.list_title }}</h2>
-      {%- endif -%}
-      <ul class="post-list">
-        {%- for post in posts -%}
-        <li>
-          <span class="post-meta">
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </span>
-          <h5>{{ post.date | date: "%Y-%m-%d" }}</h5>
-          {{ post.tldr }}
-        </li>
-        {%- endfor -%}
-      </ul>  
-    {%- endif -%}
-</div>
+<main class="container">
+  <section id="main-content" aria-label="Content">
+    <div class="home">
+        {%- if page.title -%}
+          <h1 class="page-heading">{{ page.title }}</h1>
+        {%- endif -%}
+      
+        {% if site.paginate %}
+          {% assign posts = paginator.posts %}
+        {% else %}
+          {% assign posts = site.posts %}
+        {% endif %}
+      
+        {%- if posts.size > 0 -%}
+          {%- if page.list_title -%}
+            <h2 class="post-list-heading">{{ page.list_title }}</h2>
+          {%- endif -%}
+          <ul class="post-list">
+            {%- for post in posts -%}
+            <li>
+              <span class="post-meta">
+                <a class="post-link" href="{{ post.url | relative_url }}">
+                  {{ post.title | escape }}
+                </a>
+              </span>
+              <h5>{{ post.date | date: "%Y-%m-%d" }}</h5>
+              {{ post.tldr }}
+            </li>
+            {%- endfor -%}
+          </ul>  
+        {%- endif -%}
+    </div>
+  </section>
+</main>
