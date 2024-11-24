@@ -16,4 +16,4 @@ On this blog, you'll find:
 
 Check out my TryHackMe profile:
 
-[![TryHackMe](https://tryhackme-badges.s3.amazonaws.com/ihalos.png)](https://tryhackme.com/r/p/ihalos)
+[![TryHackMe](https://tryhackme-badges.s3.amazonaws.com/mfredstam.png)](https://tryhackme.com/r/p/mfredstam)
